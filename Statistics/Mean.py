@@ -1,5 +1,5 @@
-from Mathoperations.addition import Addition
-from Mathoperations.divison import Divsion
+from MathOperations.addition import Addition
+from MathOperations.divison import Divsion
 
 class Mean:
     def __init__(self):
