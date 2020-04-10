@@ -1,6 +1,6 @@
 from Statistics.Mean import Mean
 from Statistics.StandardDeviation import StandardDeviation
-from RandomG.PickSeed import PickSeedList
+from Random.PickSeed import PickSeed
 from MathOperations.Division import Division
 
 
@@ -10,7 +10,7 @@ class Zscore():
 
     @staticmethod
     def zscore(sd, data):
-        X = PickSeedList.pickSeed(sd, data)
+        X = PickSeed.pickSeed(sd, data)
         meanData = Mean.mean(data)
         sd = StandardDeviation.standardDeviation(data)
         z = Division.divide(X - meanData, sd)

@@ -10,4 +10,3 @@ class Mean:
             total = Addition.sum(total, num)
         return Division.divide(total, num_values)
 
-    

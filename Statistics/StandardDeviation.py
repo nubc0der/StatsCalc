@@ -1,5 +1,5 @@
 from MathOperations.Root import Root
-from Statistic.Variance import Variance
+from Statistics.Variance import Variance
 
 
 class StandardDeviation:

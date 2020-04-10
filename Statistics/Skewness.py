@@ -1,9 +1,5 @@
-from scipy.stats
-
+import scipy.stats
 class Skewness:
-    def __init__(self):
-        pass
-
     @staticmethod
-    def skewness (data):
-        return scripy.stats.skew(data)
+    def skewness(data):
+        return scipy.stats.skew(data)
