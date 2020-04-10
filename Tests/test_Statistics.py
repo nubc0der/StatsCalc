@@ -1,99 +1,55 @@
 import unittest
-
-from PopulationSamples import Sample, SampleSizeUnknownPop
-from Statistics.Statistics import Statistics
-
+from StatisticFunctions.Mean import Mean
+from StatisticFunctions.Median import Median
+from StatisticFunctions.Mode import Mode
+from StatisticFunctions.Variance import Variance
+from StatisticFunctions.StandardDeviation import StandardDeviation
+from StatisticFunctions.MeanDeviation import MeanDeviation
+from StatisticFunctions.Quartiles import Quartiles
+from StatisticFunctions.Covariance import Covariance
+from StatisticFunctions.Skewness import Skewness
+from StatisticFunctions.PopulationCorrelation import PopulationCorrelation
+from StatisticFunctions.SampleCorrelation import SampleCorrelation
+from StatisticFunctions.Zscore import Zscore
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.testData = [1, 2, 3, 4]
         self.testData2 = [1, 2, 2, 3, 4]
-        self.testData3 = [1, 2, 3, 4]
-        self.statistics = Statistics()
+        self.testData3 = [1, 2, 4, 5]
 
-    def test_instantiate_calculator(self):
-        self.assertIsInstance(self.statistics, Statistics)
+    def test_StatisticFunctions_Mean(self):
+        self.assertEqual(2.5, Mean.mean(self.testData))
 
-    def test_mean_calculator(self):
-        m = self.statistics.mean(self.testData)
-        self.assertEqual(m, 2.5)
+    def test_StatisticFunctions_Median(self):
+        self.assertEqual(2.5, Median.median(self.testData))
 
-    def test_median_calculator(self):
-        med = self.statistics.median(self.testData)
-        self.assertEqual(med, 2.5)
+    def test_StatisticFunctions_Mode(self):
+        self.assertEqual(2, Mode.mode(self.testData2))
 
-    def test_mode_calculator(self):
-        theMode = self.statistics.mode(self.testData2)
-        self.assertEqual(theMode, 2)
+    def test_StatisticFunctions_Variance(self):
+        self.assertEqual(1.25, Variance.variance(self.testData))
 
-    def test_variance_calculator(self):
-        v = self.statistics.var(self.testData)
-        self.assertEqual(v, 1.25)
+    def test_StatisticFunctions_StandardDeviation(self):
+        self.assertEqual(1.118033988749895, StandardDeviation.standardDeviation(self.testData))
 
-    def test_stdDev_calculator(self):
-        std = self.statistics.stdDev(self.testData)
-        self.assertEqual(std, 1.118033988749895)
+    def test_StatisticFunctions_Quartiles(self):
+        self.assertEqual([1.75, 2.5, 3.25], Quartiles.quartiles(self.testData))
 
-    def test_meanDeviation_calculator(self):
-        meanDev = self.statistics.meandeviation(self.testData)
-        self.assertEqual(meanDev, 1)
+    def test_StatisticFunctions_Covariance(self):
+        self.assertEqual(2.333333333333333, Covariance.covariance(self.testData, self.testData3))
 
-    def test_PopulationCorrelation_calculator(self):
-        popCo = self.statistics.popCo(PopulationCorrelation.popCor(self.testData, self.testData3))
-        self.assertEqual(popCo, -0.22499088742463133)
+    def test_StatisticFunctions_Skewness(self):
+        self.assertEqual(0, Skewness.skewness(self.testData))
 
-    def test_RandomNoSeed_Int(self):
-        num = self.statistics.randomNoSeedInt(0, 10)
-        self.assertEqual(isinstance(num, int), True)
+    def test_StatisticFunctions_MeanDeviation(self):
+        self.assertEqual(1, MeanDeviation.meanDeviation(self.testData))
 
-    def test_RandomNoSeed_Dec(self):
-        num = self.statistics.randomNoSeedDec(0, 10)
-        self.assertEqual(isinstance(num, float), True)
+    def test_StatisticFunctions_PopulationCorrelation(self):
+        self.assertEqual(1.3199326582148883, PopulationCorrelation.popCor(self.testData, self.testData3))
 
-    def test_RandomSeed_Int(self):
-        result = self.statistics.randomWithSeedInt(4, 0, 10)
-        result2 = self.statistics.randomWithSeedInt(4, 0, 10)
-        self.assertEqual(result, result2)
+    def test_StatisticFunctions_SampleCorrelation(self):
+        self.assertEqual(1.084333414387259, SampleCorrelation.correlation(3, self.testData, self.testData3))
 
-    def test_RandomSeed_Dec(self):
-        result = self.statistics.randomWithSeedDec(4, 0, 10)
-        result2 = self.statistics.randomWithSeedDec(4, 0, 10)
-        self.assertEqual(result, result2)
-
-    def test_RandomListInt(self):
-        result = self.statistics.randomListInt(0, 10, 5, 4)
-        self.assertEqual(result, [7, 5, 1, 8, 7])
-
-    def test_RandomListDec(self):
-        result = self.statistics.randomListDec(0, 10, 5, 4)
-        self.assertEqual(result, [9.670298390136766, 5.4723224917572235,
-                                  9.726843599648843, 7.148159936743647,
-                                  6.977288245972709])
-
-    def test_SimpleRandSampling(self):
-        result = self.statistics.SimpleSampling(3, self.testData, 5)
-        self.assertEqual(result, [3, 1, 2, 1, 1])
-
-    def test_SystematicRandSampling(self):
-        result = self.statistics.SystematicSampling(self.testData)
-        self.assertEqual(result, [3, 21, 43, 21, 20])
-
-    def test_ConfidenceInterval(self):
-        result = self.statistics.SystematicSampling(.90, self.testData)
-        self.assertEqual(result, (0.8046719486285641, 3.9953280513714358))
-
-    def test_Margin_Error(self):
-        result = self.statistics.MarginError(3, self.testData)
-        self.assertEqual(result, -14.133333333333335)
-
-    def test_Cochran(self):
-        result = self.statistics.Cochran(3, self.testData, 4)
-        self.assertEqual(result, 0.0010094984628091588)
-
-    def test_sample_size_unknown(self):
-        result = SampleSizeUnknownPop.sampleSize(3 , self.testData, 0.41)
-        self.assertEqual(result, 0.0012487381269214882)
-
-    def test_sample_size_known(self):
-        result = SampleSizeKnown.sampleSize(3, self.testData)
-        self.assertEqual(result, 1.0)
+    def test_StatisticFunctions_ZScore(self):
+        self.assertEqual(0.4472135954999579, Zscore.zscore(4, self.testData))
