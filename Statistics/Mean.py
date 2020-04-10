@@ -11,4 +11,4 @@ class Mean:
     total = 0
     for num in data:
         total = Addition(total, num)
-    return Divsion(num_values,total)
+    return Division(num_values,total)

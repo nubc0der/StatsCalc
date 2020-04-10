@@ -39,4 +39,4 @@ class Calculator:
 
     def log(self, a, b):
         self.Result = Logarithm.log(a, b)
-        return self.Result 
+        return self.Result
