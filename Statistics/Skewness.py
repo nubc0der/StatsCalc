@@ -1,5 +1,9 @@
-from scipy.stats import skew
-import numpy as np
-import pylab as p
+from scipy.stats
 
-scipy.stats.skew(array, axis=0, bias=True)
+class Skewness:
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def skewness (data):
+        return scripy.stats.skew(data)
