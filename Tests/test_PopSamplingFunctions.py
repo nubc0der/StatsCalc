@@ -1,13 +1,13 @@
 import unittest
 from random import randint, seed
 
-from PopSamplingFunctions.Cochran import Cochran
-from PopSamplingFunctions.SimpleSampling import SimpleSampling
-from PopSamplingFunctions.SystematicSampling import SystematicSampling
-from PopSamplingFunctions.ConfidenceInterval import ConfidenceInterval
-from PopSamplingFunctions.MarginError import MarginError
-from PopSamplingFunctions.SampleSizeKnown import SampleSizeKnownPop
-from PopSamplingFunctions.SampleSizeUnknownPop import SampleSizeUnkownPop
+from PopulationSamples.Cochran import Cochran
+from PopulationSamples.SimpleSampling import SimpleSampling
+from PopulationSamples.SystematicSampling import SystematicSampling
+from PopulationSamples.ConfidenceInterval import ConfidenceInterval
+from PopulationSamples.MarginError import MarginError
+from PopulationSamples.SampleSizeKnown import SampleSizeKnownPop
+from PopulationSamples.SampleSizeUnknownPop import SampleSizeUnkownPop
 
 class MyTestCase(unittest.TestCase):
 
