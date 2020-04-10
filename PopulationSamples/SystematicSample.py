@@ -6,7 +6,7 @@ class SystematicSampling():
 
     def systematicSampling(lst):
         size = len(lst)
-        num = round((RandomWithSeed.randomInt(size, 2, size))/4)
+        num = round((WithSeed.randomInt(size, 2, size))/4)
 
         if num == 1:
             num = 3

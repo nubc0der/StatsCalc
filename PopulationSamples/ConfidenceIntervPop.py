@@ -1,5 +1,5 @@
 from scipy.stats import sem, t
-from StatisticTests.Mean import Mean
+from Statistics.Mean import Mean
 
 
 class ConfidenceInterv():

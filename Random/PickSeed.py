@@ -1,5 +1,5 @@
 from numpy.random import seed
-from Random.SelectItemList import SelectItemList
+from Random.ItemLst import ItemLst
 
 class PickSeed():
     @staticmethod
