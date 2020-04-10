@@ -4,9 +4,7 @@ from StatisticTests.Mean import Mean
 
 class ConfidenceInterv():
     @staticmethod
-
     def confidenceInterv(conf, data):
-
         lngth = len(data)
         mean = Mean.mean(data)
         std_err = sem(data)

@@ -1,16 +1,16 @@
 import unittest
-from StatisticFunctions.Mean import Mean
-from StatisticFunctions.Median import Median
-from StatisticFunctions.Mode import Mode
-from StatisticFunctions.Variance import Variance
-from StatisticFunctions.StandardDeviation import StandardDeviation
-from StatisticFunctions.MeanDeviation import MeanDeviation
-from StatisticFunctions.Quartiles import Quartiles
-from StatisticFunctions.Covariance import Covariance
-from StatisticFunctions.Skewness import Skewness
-from StatisticFunctions.PopulationCorrelation import PopulationCorrelation
-from StatisticFunctions.SampleCorrelation import SampleCorrelation
-from StatisticFunctions.Zscore import Zscore
+from Statistics.Mean import Mean
+from Statistics.Median import Median
+from Statistics.Mode import Mode
+from Statistics.Variance import Variance
+from Statistics.StandardDeviation import StandardDeviation
+from Statistics.MeanDeviation import MeanDeviation
+from Statistics.Quartiles import Quartiles
+from Statistics.Covariance import Covariance
+from Statistics.Skewness import Skewness
+from Statistics.PopulationCorrelation import PopulationCorrelation
+from Statistics.SampleCorrelation import SampleCorrelation
+from Statistics.Zscore import Zscore
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:

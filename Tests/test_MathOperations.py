@@ -8,6 +8,7 @@ from MathOperations.exponentiation import Exponentiation
 from MathOperations.root import Root
 from MathOperations.log import Log
 
+
 class MyTestCase(unittest.TestCase):
 
     def test_MathOperations_Addition(self):
@@ -29,11 +30,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(3, Root.root(9, 2))
 
     def test_MathOperations_Log(self):
-        self.assertEqual(3, Log.logarithm(2,8))
+        self.assertEqual(3, Log.logarithm(2, 8))
 
     def test_MathOperations_sum_list(self):
         valuelist = [1, 2, 3]
         self.assertEqual(6, Addition.sum(valuelist))
+
 
 if __name__ == '__main__':
     unittest.main()
