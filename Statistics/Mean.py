@@ -1,8 +1,9 @@
 from Mathoperations.addition import Addition
 from Mathoperations.divison import Divsion
 
-
-def mean(data):
+class Mean:
+    @staticmethod
+    def mean(data):
     num_values = len(data)
     total = 0
     for num in data:

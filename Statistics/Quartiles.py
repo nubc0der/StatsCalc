@@ -1,6 +1,17 @@
 import numpy
-arr = array
-q = quantile_value
-axis = 0
 
-Quartile = numpy.quantile(arr, q, axis)
+class Quartiles:
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def quartiles(data):
+        q1 = numpy.quantile(data)
+        q2 = numpy.quantile(data)
+        q3 = numpy.quantile(data)
+
+        return [a, b, c]
+
+
+
