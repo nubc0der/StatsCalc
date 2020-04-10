@@ -1,5 +1,5 @@
 from PopulationSamples.MarginError import MarginError
-from StatisticTests.StandardDeviation import StandardDeviation
+from Statistics.StandardDeviation import StandardDeviation
 from MathOperations.Exponentiation import Exponentiation
 
 class SampleSzKnown():

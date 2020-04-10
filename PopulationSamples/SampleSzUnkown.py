@@ -1,5 +1,5 @@
-from StatisticFunctions.Zscore import Zscore
-from PopSamplingFunctions.MarginError import MarginError
+from Statistics.Zscore import Zscore
+from PopulationSamples.MarginError import MarginError
 from MathOperations.Exponentiation import Exponentiation
 
 class SampleSizeUnkownPop():

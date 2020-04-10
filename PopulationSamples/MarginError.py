@@ -1,5 +1,5 @@
-from StatisticTests.StandardDeviation import StandardDeviation
-from StatisticTests.Zscore import Zscore
+from Statistics.StandardDeviation import StandardDeviation
+from Statistics.Zscore import Zscore
 from MathOperations import Root
 
 class MarginError():

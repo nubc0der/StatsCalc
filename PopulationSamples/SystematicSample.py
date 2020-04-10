@@ -1,4 +1,4 @@
-from RandomGenerator.RandomWithSeed import RandomWithSeed
+from Random.WithSeed import WithSeed
 
 
 class SystematicSampling():

@@ -1,4 +1,4 @@
-from RandomGenerator.SelectWithSeed import SelectWithSeed
+from Random.SelectWithSeed import SelectWithSeed
 
 from numpy.random import seed
 

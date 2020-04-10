@@ -1,6 +1,6 @@
-from StatisticTests.Zscore import Zscore
+from Statistics.Zscore import Zscore
 from PopulationSamples.MarginError import MarginError
-from StatisticTests.PopulationProportion import PopulationProportion
+from Statistics.PopulationProportion import PopulationProportion
 from MathOperations.Exponentiation import Exponentiation
 
 
