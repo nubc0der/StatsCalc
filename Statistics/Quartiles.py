@@ -11,7 +11,7 @@ class Quartiles:
         q2 = numpy.quantile(data)
         q3 = numpy.quantile(data)
 
-        return [a, b, c]
+        return [q1, q2, q3]
 
 
 
