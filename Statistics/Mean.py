@@ -2,6 +2,9 @@ from Mathoperations.addition import Addition
 from Mathoperations.divison import Divsion
 
 class Mean:
+    def __init__(self):
+        pass
+
     @staticmethod
     def mean(data):
     num_values = len(data)
